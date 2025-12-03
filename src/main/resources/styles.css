@@ -1,0 +1,193 @@
+/* Estilos modernos para ProductivityHub */
+
+.root {
+    -fx-font-family: "Segoe UI", "System", sans-serif;
+}
+
+/* ScrollBar personalizado */
+.scroll-bar:vertical {
+    -fx-background-color: #1a1a2e;
+    -fx-pref-width: 12px;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #4A90E2;
+    -fx-background-radius: 6px;
+}
+
+.scroll-bar:vertical .track {
+    -fx-background-color: #0f0f1e;
+}
+
+.scroll-bar:horizontal {
+    -fx-background-color: #1a1a2e;
+    -fx-pref-height: 12px;
+}
+
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: #4A90E2;
+    -fx-background-radius: 6px;
+}
+
+.scroll-bar:horizontal .track {
+    -fx-background-color: #0f0f1e;
+}
+
+/* Botões */
+.button {
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}
+
+.button:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(74, 144, 226, 0.5), 8, 0, 0, 3);
+}
+
+/* TextField e TextArea */
+.text-field, .text-area {
+    -fx-background-color: #1a1a2e;
+    -fx-text-fill: white;
+    -fx-border-color: #2d2d44;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px;
+}
+
+.text-field:focused, .text-area:focused {
+    -fx-border-color: #4A90E2;
+    -fx-border-width: 2px;
+}
+
+/* ComboBox */
+.combo-box {
+    -fx-background-color: #1a1a2e;
+    -fx-text-fill: white;
+    -fx-border-color: #2d2d44;
+    -fx-border-radius: 5px;
+}
+
+.combo-box .list-view {
+    -fx-background-color: #1a1a2e;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #1a1a2e;
+    -fx-text-fill: white;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #2d2d44;
+}
+
+/* DatePicker */
+.date-picker {
+    -fx-background-color: #1a1a2e;
+    -fx-text-fill: white;
+}
+
+.date-picker .text-field {
+    -fx-background-color: #1a1a2e;
+    -fx-text-fill: white;
+}
+
+/* Dialog */
+.dialog-pane {
+    -fx-background-color: #1a1a2e;
+}
+
+.dialog-pane .label {
+    -fx-text-fill: white;
+}
+
+.dialog-pane .button {
+    -fx-background-color: #4A90E2;
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+}
+
+.dialog-pane .button:hover {
+    -fx-background-color: #5aa0f2;
+}
+
+/* CheckBox */
+.check-box {
+    -fx-text-fill: white;
+}
+
+.check-box .box {
+    -fx-background-color: #1a1a2e;
+    -fx-border-color: #4A90E2;
+    -fx-border-radius: 3px;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: #4A90E2;
+}
+
+/* ProgressBar */
+.progress-bar {
+    -fx-background-color: #2d2d44;
+    -fx-background-radius: 5px;
+}
+
+.progress-bar .track {
+    -fx-background-color: #2d2d44;
+    -fx-background-radius: 5px;
+}
+
+.progress-bar .bar {
+    -fx-background-radius: 5px;
+}
+
+/* Charts */
+.chart {
+    -fx-background-color: #1a1a2e;
+    -fx-legend-visible: true;
+}
+
+.chart-title {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.chart-legend {
+    -fx-background-color: transparent;
+}
+
+.chart-legend-item {
+    -fx-text-fill: white;
+}
+
+.axis {
+    -fx-tick-label-fill: white;
+    -fx-tick-label-font-size: 12px;
+}
+
+.axis-label {
+    -fx-text-fill: white;
+}
+
+/* PieChart */
+.chart-pie-label {
+    -fx-fill: white;
+    -fx-font-size: 12px;
+}
+
+/* BarChart */
+.default-color0.chart-bar {
+    -fx-bar-fill: #4A90E2;
+}
+
+.default-color1.chart-bar {
+    -fx-bar-fill: #50C878;
+}
+
+.default-color2.chart-bar {
+    -fx-bar-fill: #FF6B6B;
+}
+
+.default-color3.chart-bar {
+    -fx-bar-fill: #FFD93D;
+}
+
