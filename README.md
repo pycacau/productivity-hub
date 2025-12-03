@@ -9,7 +9,7 @@
 
 **Dashboard de Produtividade Pessoal com Interface Moderna e Analytics Avançados**
 
-[Características](#-características) • [Tecnologias](#-tecnologias) • [Instalação](#-instalação) • [Uso](#-uso) • [Screenshots](#-screenshots)
+[Características](#-características) • [Tecnologias](#-tecnologias) • [Instalação](#-instalação) • [Uso](#-uso) • [Estrutura](#-estrutura-do-projeto)
 
 </div>
 
@@ -74,31 +74,87 @@ Este projeto foi desenvolvido para demonstrar:
 ## 📦 Instalação
 
 ### Pré-requisitos
-- Java JDK 17 ou superior
-- Maven 3.8+ (ou use o Maven Wrapper incluído)
+- **Sistema Operacional**: Windows 10/11 (scripts otimizados para Windows)
+- **Java JDK 17** ou superior
+- **Maven 3.8+** (ou use os scripts de instalação automática)
+- **Winget ou Chocolatey** (opcional, para instalação automática)
 
-### Passos
+> 💡 **Dica**: Os scripts de instalação automática detectam e instalam automaticamente as dependências necessárias!
 
-1. **Clone o repositório**
+### 🚀 Instalação Automática (Recomendado)
+
+#### Windows
+
+**Opção 1: Script Automático (Instala tudo automaticamente)**
+```powershell
+# Execute o script que instala Java, Maven e executa a aplicação
+.\instalar-e-executar.ps1
+```
+
+Este script irá:
+- ✅ Verificar se Java e Maven estão instalados
+- 📦 Instalar automaticamente via Winget ou Chocolatey (se disponível)
+- 🔨 Compilar o projeto
+- 🚀 Executar a aplicação
+
+**Opção 2: Instalação Manual do Maven (se Java já estiver instalado)**
+```powershell
+.\instalar-maven.ps1
+```
+
+**Opção 3: Execução Rápida (se tudo já estiver instalado)**
+```powershell
+# PowerShell
+.\executar.ps1
+
+# Ou Batch
+.\rodar.bat
+```
+
+### 📋 Instalação Manual
+
+1. **Instale Java JDK 17+**
+   - Download: https://adoptium.net/
+   - Configure a variável de ambiente `JAVA_HOME`
+
+2. **Instale Maven 3.8+**
+   - Download: https://maven.apache.org/download.cgi
+   - Configure a variável de ambiente `MAVEN_HOME`
+   - Adicione `%MAVEN_HOME%\bin` ao PATH
+
+3. **Clone o repositório**
 ```bash
 git clone https://github.com/seu-usuario/productivity-hub.git
 cd productivity-hub
 ```
 
-2. **Compile o projeto**
+4. **Compile o projeto**
 ```bash
 mvn clean compile
 ```
 
-3. **Execute a aplicação**
+5. **Execute a aplicação**
 ```bash
 mvn javafx:run
 ```
 
-Ou compile e execute manualmente:
-```bash
-mvn clean package
-java --module-path /caminho/para/javafx/lib --add-modules javafx.controls,javafx.fxml -cp target/productivity-hub-1.0.0.jar com.productivityhub.App
+### 📝 Scripts Disponíveis
+
+| Script | Descrição | Quando Usar |
+|--------|-----------|-------------|
+| `instalar-e-executar.ps1` | Instala Java e Maven automaticamente e executa | Primeira vez ou se nada estiver instalado |
+| `instalar-maven.ps1` | Instala apenas o Maven | Se Java já estiver instalado |
+| `executar.ps1` | Executa a aplicação (PowerShell) | Quando tudo já estiver instalado |
+| `rodar.bat` | Script batch para execução rápida | Execução rápida no Windows |
+| `executar.bat` | Alternativa batch | Execução alternativa |
+
+**Exemplo de uso:**
+```powershell
+# Primeira execução (instala tudo)
+.\instalar-e-executar.ps1
+
+# Execuções seguintes (já tem tudo instalado)
+.\rodar.bat
 ```
 
 ---
@@ -174,7 +230,14 @@ productivity-hub/
 │   ├── tasks.json
 │   └── projects.json
 ├── pom.xml                                   # Configuração Maven
-└── README.md
+├── instalar-e-executar.ps1                  # Script de instalação automática
+├── instalar-maven.ps1                        # Script para instalar Maven
+├── executar.ps1                              # Script de execução (PowerShell)
+├── rodar.bat                                 # Script de execução (Batch)
+├── executar.bat                              # Alternativa batch
+├── INSTALACAO.md                             # Guia detalhado de instalação
+├── LICENSE                                   # Licença MIT
+└── README.md                                 # Este arquivo
 ```
 
 ---
@@ -186,6 +249,23 @@ Edite o arquivo `src/main/resources/styles.css` para personalizar o tema da apli
 
 ### Modificar Persistência
 O `DataService` atualmente usa JSON. Você pode estender para usar banco de dados modificando a classe `DataService.java`.
+
+### Solução de Problemas
+
+**Erro: "mvn não é reconhecido"**
+- Execute `.\instalar-maven.ps1` para instalar o Maven
+- Ou reinicie o terminal após instalar manualmente
+
+**Erro: "java não é reconhecido"**
+- Instale o Java JDK 17+ de https://adoptium.net/
+- Execute `.\instalar-e-executar.ps1` para instalação automática
+
+**Aplicação não abre**
+- Verifique se Java e Maven estão no PATH
+- Reinicie o terminal após instalar dependências
+- Execute `mvn clean compile` antes de `mvn javafx:run`
+
+Para mais detalhes, consulte o arquivo `INSTALACAO.md`.
 
 ---
 
@@ -220,7 +300,18 @@ Desenvolvido com ❤️ para demonstrar habilidades em Java, JavaFX e desenvolvi
 - 💾 Persistência de dados local
 - 🎨 Design responsivo e atraente
 - 🔄 Arquitetura MVC bem estruturada
+- 🚀 Scripts de instalação automática
 - 📱 Pronto para destacar no LinkedIn e GitHub!
+
+## 🎯 Início Rápido
+
+```bash
+# Windows - Instalação e execução automática
+.\instalar-e-executar.ps1
+
+# Ou se já tiver tudo instalado
+.\rodar.bat
+```
 
 ---
 
